@@ -223,11 +223,11 @@ public class IniciarSesion extends javax.swing.JFrame {
         dlgRecuperaCuenta.getContentPane().setLayout(dlgRecuperaCuentaLayout);
         dlgRecuperaCuentaLayout.setHorizontalGroup(
             dlgRecuperaCuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 724, Short.MAX_VALUE)
         );
         dlgRecuperaCuentaLayout.setVerticalGroup(
             dlgRecuperaCuentaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 368, Short.MAX_VALUE)
         );
 
         notif.setFont(new java.awt.Font("Stark", 0, 12)); // NOI18N
