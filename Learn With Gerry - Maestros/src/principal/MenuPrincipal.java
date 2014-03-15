@@ -1,6 +1,9 @@
 package principal;
 
+import clases.PerfilCarga;
 import javax.swing.JButton;
+import util.ColorFondo;
+import util.UtilPerfil;
 
 /**
  *
@@ -413,7 +416,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void cambiarColorFondo(JButton boton){
         dlgOpciones.setVisible(false);
         pnlPrincipal.setBackground(boton.getBackground());
-        //UtilPerfil.almacenarColorPerfil(PerfilCarga.getNick(), ColorFondo.obtenerIdPorColor(boton.getBackground()));
+        UtilPerfil.almacenarColorPerfil(PerfilCarga.getNick(), ColorFondo.obtenerIdPorColor(boton.getBackground()));
     }
     /**
      * @param args the command line arguments
