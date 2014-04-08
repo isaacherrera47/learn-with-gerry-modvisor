@@ -7,9 +7,13 @@
 package util;
 
 import bd.ConexionBD;
+import clases.Perfil;
 import clases.PerfilCarga;
+import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComponent;
@@ -66,6 +70,32 @@ public class UtilPerfil {
             Logger.getLogger(UtilPerfil.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
             ConexionBD.cerrarConexion();            
+        }
+    }
+        public static void llenarRankingTodos(ArrayList lista,String filtro) {
+        try {
+            ConexionBD.abrirConexion();
+            String sql = "call rankingfiltro(?)";            
+            CallableStatement cs = ConexionBD.con.prepareCall(sql);
+            cs.setString(1, filtro);
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                Perfil p = new Perfil();
+                p.setNombre(rs.getString("nombre"));
+                p.setApPat(rs.getString("ApPaterno"));
+                p.setApMat(rs.getString("ApMaterno"));
+                p.setAlias(rs.getString("Alias"));
+                p.setCodAvatar(rs.getInt("avatar"));
+                p.setColor(ColorFondo.obtenerColorPorID(rs.getInt("color")));
+                p.setGrado(rs.getString("grado"));
+                p.setUser(rs.getString("user"));
+                p.setNivel(rs.getInt("nivel"));
+                lista.add(p);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UtilPerfil.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            ConexionBD.cerrarConexion();
         }
     }
     

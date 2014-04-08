@@ -12,7 +12,7 @@ import util.UtilPerfil;
 public class MenuPrincipal extends javax.swing.JFrame {
 
     public MenuPrincipal() {
-        initComponents();
+        initComponents();        
     }
 
     
@@ -283,6 +283,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRendimiento.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnRendimiento.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnRendimiento.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnRendimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRendimientoActionPerformed(evt);
+            }
+        });
 
         btnPerfil.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
@@ -394,6 +399,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnSalirOpcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirOpcionesActionPerformed
        dlgOpciones.setVisible(false);
     }//GEN-LAST:event_btnSalirOpcionesActionPerformed
+
+    private void btnRendimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRendimientoActionPerformed
+        new RendimientoGeneral(this, true).setVisible(true);
+    }//GEN-LAST:event_btnRendimientoActionPerformed
 
     private void cambiarColorFondo(JButton boton){
         dlgOpciones.setVisible(false);
