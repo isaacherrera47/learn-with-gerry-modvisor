@@ -123,7 +123,7 @@ public class RendimientoGeneral extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        if (txtBuscar.getText().trim().length() >= 5) {
+        if (txtBuscar.getText().trim().length() >=4) {
             vaciarPaneles();
             llenarPanel(txtBuscar.getText());
         }

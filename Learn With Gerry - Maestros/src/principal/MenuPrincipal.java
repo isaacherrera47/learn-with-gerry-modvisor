@@ -255,12 +255,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Learn with Gerry - Superusuario");
-        setMinimumSize(new java.awt.Dimension(800, 700));
+        setMinimumSize(new java.awt.Dimension(800, 350));
         setResizable(false);
 
         pnlPrincipal.setBackground(new java.awt.Color(41, 128, 185));
-        pnlPrincipal.setMinimumSize(new java.awt.Dimension(800, 700));
-        pnlPrincipal.setPreferredSize(new java.awt.Dimension(800, 700));
 
         btnVerGrupo.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnVerGrupo.setForeground(new java.awt.Color(255, 255, 255));
@@ -298,6 +296,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnPerfil.setFocusPainted(false);
         btnPerfil.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnPerfil.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPerfilActionPerformed(evt);
+            }
+        });
 
         btnOpciones.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnOpciones.setForeground(new java.awt.Color(255, 255, 255));
@@ -325,42 +328,50 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnSalir.setFocusPainted(false);
         btnSalir.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnSalir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlPrincipalLayout = new javax.swing.GroupLayout(pnlPrincipal);
         pnlPrincipal.setLayout(pnlPrincipalLayout);
         pnlPrincipalLayout.setHorizontalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
+                .addGap(38, 38, 38)
+                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnRendimiento, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVerGrupo, javax.swing.GroupLayout.Alignment.LEADING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnVerGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnOpciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnRendimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(300, 300, 300)
-                        .addComponent(btnSalir)))
+                        .addGap(19, 19, 19)
+                        .addComponent(btnPerfil))
+                    .addComponent(btnOpciones))
+                .addGap(57, 57, 57)
+                .addComponent(btnSalir)
                 .addContainerGap())
         );
         pnlPrincipalLayout.setVerticalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(btnVerGrupo)
+                .addContainerGap()
+                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVerGrupo)
+                    .addComponent(btnOpciones))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(btnOpciones)
-                        .addGap(31, 31, 31)
                         .addComponent(btnPerfil)
-                        .addGap(37, 37, 37)
-                        .addComponent(btnRendimiento)
-                        .addGap(14, 44, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGap(33, 33, 33))
+                    .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
+                            .addComponent(btnRendimiento)
+                            .addGap(33, 33, 33))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
+                            .addComponent(btnSalir)
+                            .addContainerGap()))))
         );
 
         getContentPane().add(pnlPrincipal, java.awt.BorderLayout.CENTER);
@@ -403,6 +414,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnRendimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRendimientoActionPerformed
         new RendimientoGeneral(this, true).setVisible(true);
     }//GEN-LAST:event_btnRendimientoActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        this.dispose();
+        new IniciarSesion().setVisible(true);
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilActionPerformed
+        new DatosJugador(this, true).setVisible(true);
+    }//GEN-LAST:event_btnPerfilActionPerformed
 
     private void cambiarColorFondo(JButton boton){
         dlgOpciones.setVisible(false);
