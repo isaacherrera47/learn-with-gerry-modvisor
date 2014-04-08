@@ -5,11 +5,9 @@ import com.digitalpersona.onetouch.capture.event.DPFPSensorEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
@@ -631,7 +629,7 @@ public class IniciarSesion extends javax.swing.JFrame {
            @Override
            public void actionPerformed(ActionEvent e) {
               dlgRecuperaCuenta.setVisible(false);
-              borraCamposRec();
+              borraCamposRec();              
            }
        });
        t.setRepeats(false);
