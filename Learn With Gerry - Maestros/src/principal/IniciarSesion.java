@@ -2,14 +2,18 @@ package principal;
 
 import bd.ConexionBD;
 import com.digitalpersona.onetouch.capture.event.DPFPSensorEvent;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
+import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import util.ColorFondo;
@@ -86,6 +90,7 @@ public class IniciarSesion extends javax.swing.JFrame {
 
         pnlRegistro.setBackground(new java.awt.Color(41, 128, 185));
         pnlRegistro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        pnlRegistro.setMinimumSize(new java.awt.Dimension(500, 500));
         pnlRegistro.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Stark", 0, 100)); // NOI18N
@@ -236,7 +241,6 @@ public class IniciarSesion extends javax.swing.JFrame {
         dlgRecuperaCuenta.setMinimumSize(new java.awt.Dimension(800, 415));
         dlgRecuperaCuenta.setModal(true);
         dlgRecuperaCuenta.setUndecorated(true);
-        dlgRecuperaCuenta.setPreferredSize(new java.awt.Dimension(800, 415));
         dlgRecuperaCuenta.setResizable(false);
 
         pnlRecuperar.setBackground(new java.awt.Color(41, 128, 185));
@@ -335,7 +339,7 @@ public class IniciarSesion extends javax.swing.JFrame {
                     .addComponent(btnVerRec, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(cbxPreguntaRec, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
-                .addComponent(lblResultadoRec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblResultadoRec, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -470,7 +474,7 @@ public class IniciarSesion extends javax.swing.JFrame {
 
     private void btnAceptarRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarRegistroActionPerformed
         if (comprobarCampos()) {
-            if (herrBD.llenarPerfil(txtNombreU.getText(), String.valueOf(txtPass.getPassword()), cbxGrado.getSelectedIndex() + 0, txtNombre.getText(), txtApPat.getText(), txtApMat.getText()) == 1) {
+            if (herrBD.llenarPerfil(txtNombreU.getText(), String.valueOf(txtPass.getPassword()), cbxGrado.getSelectedIndex() *10, txtNombre.getText(), txtApPat.getText(), txtApMat.getText()) == 1) {
                 herrBD.llenarPreguntasUsuario(txtNombreU.getText(), cbxPregunta1.getSelectedIndex(), txtRespuesta1.getText());
                 herrBD.llenarPreguntasUsuario(txtNombreU.getText(), cbxPregunta2.getSelectedIndex(), txtRespuesta2.getText());
                 borrarCampos();
@@ -601,7 +605,9 @@ public class IniciarSesion extends javax.swing.JFrame {
             if (rs.first()) {
                 lblResultadoRec.setText("Te encontré :-) \n"
                         + "Usuario: " + rs.getString("iduser") + " \n"
-                        + "Contraseña: " + rs.getString("password") + " \n");
+                        + "Contraseña: " + rs.getString("password") + " \n"
+                        + "Este dialogo se cerrará automáticamente...");
+                        temporizarVentana();
                 txtNombreUsuario.setText(rs.getString("iduser"));
                 txtContraseña.setText(rs.getString("password"));
             } else {
@@ -617,6 +623,19 @@ public class IniciarSesion extends javax.swing.JFrame {
         txtUsRec.setText(null);
         cbxPreguntaRec.setSelectedIndex(0);
         txtRespRec.setText(null);
+    }
+    
+    private void temporizarVentana(){
+       Timer t = new Timer(3000, new ActionListener() {
+
+           @Override
+           public void actionPerformed(ActionEvent e) {
+              dlgRecuperaCuenta.setVisible(false);
+              borraCamposRec();
+           }
+       });
+       t.setRepeats(false);
+       t.start();
     }
 
     /**

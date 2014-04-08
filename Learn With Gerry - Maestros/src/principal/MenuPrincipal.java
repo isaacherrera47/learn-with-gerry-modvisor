@@ -41,7 +41,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         chkActivaHuella = new javax.swing.JCheckBox();
         pnlPrincipal = new javax.swing.JPanel();
         btnVerGrupo = new javax.swing.JButton();
-        btnBuscar = new javax.swing.JButton();
         btnRendimiento = new javax.swing.JButton();
         btnPerfil = new javax.swing.JButton();
         btnOpciones = new javax.swing.JButton();
@@ -219,7 +218,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         dlgHuella.setMinimumSize(new java.awt.Dimension(520, 330));
         dlgHuella.setModal(true);
         dlgHuella.setUndecorated(true);
-        dlgHuella.setPreferredSize(new java.awt.Dimension(520, 330));
         dlgHuella.setResizable(false);
 
         pnlHuella.setBackground(new java.awt.Color(41, 128, 185));
@@ -264,7 +262,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pnlPrincipal.setMinimumSize(new java.awt.Dimension(800, 700));
         pnlPrincipal.setPreferredSize(new java.awt.Dimension(800, 700));
 
-        btnVerGrupo.setFont(new java.awt.Font("Poetsen One", 0, 18)); // NOI18N
+        btnVerGrupo.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnVerGrupo.setForeground(new java.awt.Color(255, 255, 255));
         btnVerGrupo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/booklet.png"))); // NOI18N
         btnVerGrupo.setText("Ver mi grupo");
@@ -275,18 +273,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnVerGrupo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnVerGrupo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        btnBuscar.setFont(new java.awt.Font("Poetsen One", 0, 18)); // NOI18N
-        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/magnifyingglass.png"))); // NOI18N
-        btnBuscar.setText("Buscar");
-        btnBuscar.setContentAreaFilled(false);
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscar.setFocusPainted(false);
-        btnBuscar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnBuscar.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        btnBuscar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-
-        btnRendimiento.setFont(new java.awt.Font("Poetsen One", 0, 18)); // NOI18N
+        btnRendimiento.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnRendimiento.setForeground(new java.awt.Color(255, 255, 255));
         btnRendimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/pie-chart.png"))); // NOI18N
         btnRendimiento.setText("Rendimiento General");
@@ -297,7 +284,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnRendimiento.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnRendimiento.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        btnPerfil.setFont(new java.awt.Font("Poetsen One", 0, 18)); // NOI18N
+        btnPerfil.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
         btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/profle.png"))); // NOI18N
         btnPerfil.setText("Perfil");
@@ -307,7 +294,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnPerfil.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnPerfil.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        btnOpciones.setFont(new java.awt.Font("Poetsen One", 0, 18)); // NOI18N
+        btnOpciones.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnOpciones.setForeground(new java.awt.Color(255, 255, 255));
         btnOpciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/tools.png"))); // NOI18N
         btnOpciones.setText("Opciones");
@@ -340,34 +327,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPrincipalLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnVerGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnOpciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRendimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addComponent(btnPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(109, 109, 109))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
-                        .addComponent(btnSalir)
-                        .addContainerGap())))
+                        .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnVerGrupo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnOpciones, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnRendimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(300, 300, 300)
+                        .addComponent(btnSalir)))
+                .addContainerGap())
         );
         pnlPrincipalLayout.setVerticalGroup(
             pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPrincipalLayout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnVerGrupo)
-                    .addComponent(btnPerfil))
+                .addComponent(btnVerGrupo)
                 .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlPrincipalLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(btnOpciones)
-                        .addGap(24, 24, 24)
-                        .addComponent(btnBuscar)
-                        .addGap(44, 44, 44)
+                        .addGap(31, 31, 31)
+                        .addComponent(btnPerfil)
+                        .addGap(37, 37, 37)
                         .addComponent(btnRendimiento)
                         .addGap(14, 44, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrincipalLayout.createSequentialGroup()
@@ -454,7 +436,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnColor1;
     private javax.swing.JButton btnColor2;
     private javax.swing.JButton btnColor3;
