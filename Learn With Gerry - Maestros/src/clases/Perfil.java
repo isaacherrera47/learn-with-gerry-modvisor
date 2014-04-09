@@ -16,8 +16,28 @@ public class Perfil {
     private int codAvatar;
     private int nivel;
     private int logros;
+    private String password;
     private Color color;
+    private int idPersona;
 
+    public int getIdPersona() {
+        return idPersona;
+    }
+
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
+    }
+    
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    
     public String getNombre() {
         return nombre;
     }

@@ -504,6 +504,9 @@ public class IniciarSesion extends javax.swing.JFrame {
         if (herrBD.cargarPerfil(txtNombreUsuario.getText(), String.valueOf(txtContraseña.getPassword()))) {
             this.dispose();
             new MenuPrincipal().setVisible(true);
+        } else{
+            notif.setText("Hubo un error en el inicio, revisa tus datos");
+            UtilPerfil.mandarNotificacion(ColorFondo.MENSAJE_ERROR, txtNombreUsuario, notif);
         }
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 

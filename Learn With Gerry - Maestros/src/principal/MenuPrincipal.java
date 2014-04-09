@@ -270,6 +270,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnVerGrupo.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         btnVerGrupo.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         btnVerGrupo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnVerGrupo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerGrupoActionPerformed(evt);
+            }
+        });
 
         btnRendimiento.setFont(new java.awt.Font("Fairview Small Caps", 0, 24)); // NOI18N
         btnRendimiento.setForeground(new java.awt.Color(255, 255, 255));
@@ -345,9 +350,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addComponent(btnVerGrupo, javax.swing.GroupLayout.Alignment.LEADING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
                 .addGroup(pnlPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlPrincipalLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(btnPerfil))
+                    .addComponent(btnPerfil)
                     .addComponent(btnOpciones))
                 .addGap(57, 57, 57)
                 .addComponent(btnSalir)
@@ -423,6 +426,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void btnPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilActionPerformed
         new DatosJugador(this, true).setVisible(true);
     }//GEN-LAST:event_btnPerfilActionPerformed
+
+    private void btnVerGrupoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerGrupoActionPerformed
+        new VerMiGrupo(this, true).setVisible(true);
+    }//GEN-LAST:event_btnVerGrupoActionPerformed
 
     private void cambiarColorFondo(JButton boton){
         dlgOpciones.setVisible(false);
