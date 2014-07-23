@@ -1,5 +1,7 @@
 package principal;
 
+import clases.PerfilCarga;
+
 /**
  *
  * @author Isaac
@@ -25,6 +27,11 @@ public class DatosJugador extends javax.swing.JDialog {
         setMinimumSize(new java.awt.Dimension(400, 200));
         setUndecorated(true);
         setResizable(false);
+        addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                formComponentShown(evt);
+            }
+        });
 
         pnlPrincipal.setBackground(new java.awt.Color(41, 128, 185));
         pnlPrincipal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
@@ -100,6 +107,13 @@ public class DatosJugador extends javax.swing.JDialog {
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
+        String nombre= PerfilCarga.getNombre()+" "+PerfilCarga.getApPaterno()+" "+PerfilCarga.getApMaterno();
+        lblNombre.setText(nombre);
+        lblUsuario.setText(PerfilCarga.getNick());
+        lblGrado.setText(PerfilCarga.getGrado());
+    }//GEN-LAST:event_formComponentShown
 
 
     /**
