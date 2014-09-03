@@ -10,7 +10,8 @@ public class DatosJugador extends javax.swing.JDialog {
     
     public DatosJugador(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        initComponents();        
+        initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

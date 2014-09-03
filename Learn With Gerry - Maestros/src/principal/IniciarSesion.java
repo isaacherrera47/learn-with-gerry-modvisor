@@ -1,7 +1,6 @@
 package principal;
 
 import bd.ConexionBD;
-import com.digitalpersona.onetouch.capture.event.DPFPSensorEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.CallableStatement;
@@ -10,7 +9,6 @@ import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -29,16 +27,6 @@ public class IniciarSesion extends javax.swing.JFrame {
     public IniciarSesion() {
         initComponents();
         herrBD = new UtilBD();
-    }
-
-    public void fingerGone(final DPFPSensorEvent e) {
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        }
-        );
     }
 
     @SuppressWarnings("unchecked")
@@ -657,6 +645,7 @@ public class IniciarSesion extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new IniciarSesion().setVisible(true);
             }

@@ -59,7 +59,7 @@ public class ContenidoItem extends javax.swing.JPanel {
         add(btnAlias);
         btnAlias.setBounds(100, 130, 150, 101);
 
-        lblPass.setFont(new java.awt.Font("Aaargh", 1, 18)); // NOI18N
+        lblPass.setFont(new java.awt.Font("Are You Freakin' Serious ", 1, 18)); // NOI18N
         lblPass.setForeground(new java.awt.Color(255, 255, 255));
         lblPass.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/kid/unlocked.png"))); // NOI18N
@@ -69,7 +69,7 @@ public class ContenidoItem extends javax.swing.JPanel {
         add(lblPass);
         lblPass.setBounds(230, 30, 130, 90);
 
-        lblGrado.setFont(new java.awt.Font("Aaargh", 1, 18)); // NOI18N
+        lblGrado.setFont(new java.awt.Font("Are You Freakin' Serious ", 1, 18)); // NOI18N
         lblGrado.setForeground(new java.awt.Color(255, 255, 255));
         lblGrado.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblGrado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/bookshelf.png"))); // NOI18N
@@ -126,7 +126,7 @@ public class ContenidoItem extends javax.swing.JPanel {
         add(txtNombre);
         txtNombre.setBounds(100, 250, 210, 30);
 
-        lblNick.setFont(new java.awt.Font("Aaargh", 1, 18)); // NOI18N
+        lblNick.setFont(new java.awt.Font("Are You Freakin' Serious ", 1, 18)); // NOI18N
         lblNick.setForeground(new java.awt.Color(255, 255, 255));
         lblNick.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblNick.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/a.png"))); // NOI18N

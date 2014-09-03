@@ -19,6 +19,7 @@ public class RendimientoGeneral extends javax.swing.JDialog {
         initComponents();
         listaTodos = new ArrayList<>();
         llenarPanel("");
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
