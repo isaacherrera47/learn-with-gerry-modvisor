@@ -1,9 +1,7 @@
 package principal;
 
-import bd.ConexionBD;
 import clases.Perfil;
 import clases.PerfilCarga;
-import extras.ContenidoItem;
 import extras.ItemGrupo;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
@@ -21,6 +19,7 @@ public class VerMiGrupo extends javax.swing.JDialog {
         initComponents();
         lista = new ArrayList<>();
         cargarDatos();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -46,7 +45,7 @@ public class VerMiGrupo extends javax.swing.JDialog {
         setResizable(false);
 
         split.setBorder(null);
-        split.setDividerLocation(260);
+        split.setDividerLocation(270);
         split.setDividerSize(10);
         split.setContinuousLayout(true);
 
@@ -99,6 +98,7 @@ public class VerMiGrupo extends javax.swing.JDialog {
         btnCerrar.setText("X");
         btnCerrar.setBorderPainted(false);
         btnCerrar.setContentAreaFilled(false);
+        btnCerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCerrarActionPerformed(evt);

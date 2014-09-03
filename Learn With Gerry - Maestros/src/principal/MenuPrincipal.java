@@ -29,16 +29,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnColor4 = new javax.swing.JButton();
         btnColor2 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        btnEliminarC = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         btnSalirOpciones = new javax.swing.JButton();
-        dlgHuella = new javax.swing.JDialog();
-        pnlHuella = new javax.swing.JPanel();
-        lblTituloHuella = new javax.swing.JLabel();
-        btnSalirHuella = new javax.swing.JButton();
-        lblHuellaDibujada = new javax.swing.JLabel();
-        chkActivaHuella = new javax.swing.JCheckBox();
         pnlPrincipal = new javax.swing.JPanel();
         btnVerGrupo = new javax.swing.JButton();
         btnRendimiento = new javax.swing.JButton();
@@ -50,8 +41,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         dlgOpciones.setModal(true);
         dlgOpciones.setUndecorated(true);
         dlgOpciones.setResizable(false);
+        dlgOpciones.setLocationRelativeTo(null);
 
-        pnlConfiguracion.setBackground(new java.awt.Color(22, 22, 206));
+        pnlConfiguracion.setBackground(new java.awt.Color(53, 53, 227));
 
         btnColor1.setBackground(new java.awt.Color(204, 51, 51));
         btnColor1.setContentAreaFilled(false);
@@ -118,23 +110,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel2.setText("COLOR");
         jLabel2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        btnEliminarC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Trash.png"))); // NOI18N
-        btnEliminarC.setToolTipText("Eliminar Cuenta");
-        btnEliminarC.setBorderPainted(false);
-        btnEliminarC.setContentAreaFilled(false);
-        btnEliminarC.setFocusPainted(false);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fingerprint1.png"))); // NOI18N
-        jButton2.setToolTipText("Actualizar gestos");
-        jButton2.setContentAreaFilled(false);
-        jButton2.setFocusPainted(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
-
-        jLabel3.setFont(new java.awt.Font("Stark", 0, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("HUELLA DIGITAL");
-
         btnSalirOpciones.setFont(new java.awt.Font("Stark", 0, 14)); // NOI18N
         btnSalirOpciones.setForeground(new java.awt.Color(255, 255, 255));
         btnSalirOpciones.setText("X");
@@ -169,15 +144,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addGap(20, 20, 20)
                         .addGroup(pnlConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnColor5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)
-                        .addGroup(pnlConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlConfiguracionLayout.createSequentialGroup()
-                                .addGap(11, 11, 11)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton2))
-                        .addGap(43, 43, 43)
-                        .addComponent(btnEliminarC, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btnColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         pnlConfiguracionLayout.setVerticalGroup(
             pnlConfiguracionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,57 +168,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGroup(pnlConfiguracionLayout.createSequentialGroup()
                         .addComponent(btnColor5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
-                        .addComponent(btnColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlConfiguracionLayout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel3)
-                        .addGap(6, 6, 6)
-                        .addComponent(jButton2))
-                    .addGroup(pnlConfiguracionLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(btnEliminarC, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
         dlgOpciones.getContentPane().add(pnlConfiguracion, java.awt.BorderLayout.CENTER);
-
-        dlgHuella.setLocationByPlatform(true);
-        dlgHuella.setMinimumSize(new java.awt.Dimension(520, 330));
-        dlgHuella.setModal(true);
-        dlgHuella.setUndecorated(true);
-        dlgHuella.setResizable(false);
-
-        pnlHuella.setBackground(new java.awt.Color(41, 128, 185));
-        pnlHuella.setLayout(null);
-
-        lblTituloHuella.setFont(new java.awt.Font("Stark", 0, 60)); // NOI18N
-        lblTituloHuella.setForeground(new java.awt.Color(255, 255, 255));
-        lblTituloHuella.setText("HUELLA DIGITAL");
-        pnlHuella.add(lblTituloHuella);
-        lblTituloHuella.setBounds(18, 11, 484, 60);
-
-        btnSalirHuella.setFont(new java.awt.Font("Stark", 0, 24)); // NOI18N
-        btnSalirHuella.setForeground(new java.awt.Color(255, 255, 255));
-        btnSalirHuella.setText("x");
-        btnSalirHuella.setBorderPainted(false);
-        btnSalirHuella.setContentAreaFilled(false);
-        btnSalirHuella.setFocusPainted(false);
-        pnlHuella.add(btnSalirHuella);
-        btnSalirHuella.setBounds(0, 298, 44, 32);
-
-        lblHuellaDibujada.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102), 3));
-        pnlHuella.add(lblHuellaDibujada);
-        lblHuellaDibujada.setBounds(110, 80, 260, 240);
-
-        chkActivaHuella.setFont(new java.awt.Font("Stark", 0, 14)); // NOI18N
-        chkActivaHuella.setForeground(new java.awt.Color(255, 255, 255));
-        chkActivaHuella.setText("Activa");
-        chkActivaHuella.setBorderPaintedFlat(true);
-        chkActivaHuella.setFocusPainted(false);
-        chkActivaHuella.setOpaque(false);
-        pnlHuella.add(chkActivaHuella);
-        chkActivaHuella.setBounds(400, 90, 81, 23);
-
-        dlgHuella.getContentPane().add(pnlHuella, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Learn with Gerry - Superusuario");
@@ -478,24 +398,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnColor4;
     private javax.swing.JButton btnColor5;
     private javax.swing.JButton btnColor6;
-    private javax.swing.JButton btnEliminarC;
     private javax.swing.JButton btnOpciones;
     private javax.swing.JButton btnPerfil;
     private javax.swing.JButton btnRendimiento;
     private javax.swing.JButton btnSalir;
-    private javax.swing.JButton btnSalirHuella;
     private javax.swing.JButton btnSalirOpciones;
     private javax.swing.JButton btnVerGrupo;
-    private javax.swing.JCheckBox chkActivaHuella;
-    private javax.swing.JDialog dlgHuella;
     private javax.swing.JDialog dlgOpciones;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel lblHuellaDibujada;
-    private javax.swing.JLabel lblTituloHuella;
     private javax.swing.JPanel pnlConfiguracion;
-    private javax.swing.JPanel pnlHuella;
     private javax.swing.JPanel pnlPrincipal;
     // End of variables declaration//GEN-END:variables
 }
